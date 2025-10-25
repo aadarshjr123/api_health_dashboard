@@ -1,6 +1,6 @@
 # 📊 API Health Dashboard — *"Because blind debugging is overrated."* 🚦
 
-![Dashboard Preview](assets/screenshot.png)
+![Dashboard Preview](assets/Screenshot.png)
 ![Alert Preview](assets/screenshot2.png)
 
 ---
