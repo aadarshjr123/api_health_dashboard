@@ -1,0 +1,29 @@
+groups:
+  - name: APIHealthAlerts
+    rules:
+      - alert: HighRequestLatency
+        expr: rate(http_request_duration_seconds_sum[1m]) / rate(http_request_duration_seconds_count[1m]) > 1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API latency detected (>1s average)"
+          description: "The average request latency is above 1s for 30s."
+
+      - alert: TooManyRateLimitedRequests
+        expr: increase(rate_limited_total[1m]) > 5
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Rate-limit triggered frequently"
+          description: "Rate-limit count exceeded threshold within 1 minute."
+
+      - alert: ServiceDown
+        expr: up == 0
+        for: 15s
+        labels:
+          severity: critical
+        annotations:
+          summary: "API is Down"
+          description: "Prometheus failed to scrape the API endpoint."

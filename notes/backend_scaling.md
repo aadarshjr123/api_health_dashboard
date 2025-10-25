@@ -16,3 +16,11 @@
 - Simulated load & rate-limit traffic
 - Observed real-time metric shifts in Grafana
 - Captured dashboard for portfolio README
+
+
+# Day 31 – Alerts + Fault Simulation
+- Added Prometheus alert rules for latency, rate-limit, and downtime
+- Integrated Grafana alert system
+- Simulated real failures and observed metric spikes
+- Learned how to design alert thresholds for production reliability
+
