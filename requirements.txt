@@ -1,6 +1,35 @@
+# --- FastAPI & Server ---
 fastapi
 uvicorn
+
+# --- Redis & Queue ---
 redis
 rq
 prometheus_client
+
+# --- HTTP Clients ---
 requests
+httpx
+
+# --- Database Drivers ---
+psycopg2-binary               # sync Postgres (required for RQ workers)
+asyncpg                       # async Postgres
+
+# --- ORM / SQL Toolkit ---
+sqlalchemy[asyncio]
+databases
+
+# --- Rate Limiting ---
+slowapi
+
+# --- Authentication ---
+bcrypt==3.2.2
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]
+protobuf==3.20.3
+
+# --- Observability / Tracing ---
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
+opentelemetry-instrumentation-redis
+opentelemetry-exporter-jaeger
